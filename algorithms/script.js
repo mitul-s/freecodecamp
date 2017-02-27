@@ -2,7 +2,7 @@
 // Reverse a String
 
 function reverseString(str){
-   var newStr = str.split("").reverse().join("");
+  var newStr = str.split("").reverse().join("");
   return newStr;
 }
 
@@ -21,10 +21,9 @@ function palindrome(str) {
   var revStr = newStr.reverse();
   newStr = revStr.join("");
  
-if (newStr === str) {
+if(newStr === str) {
     return true;
-  }
-  else {
+  } else {
     return false;
   }
 }
@@ -44,7 +43,6 @@ function findLong(str) {
 	for (var i = 0; i < splitStr.length; i++){	
 		if(splitStr[i].length >= newStr){
 			newStr = splitStr[i].length;
-			console.log(newStr);
 		}
 	}
 	return newStr;
