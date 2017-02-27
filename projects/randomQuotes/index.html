@@ -2,14 +2,22 @@
 <html lang="">
 <head>
     <meta charset="UTF-8">
-    <title>Untitled Document</title>
+    <title>Quote Generator</title>
 	<meta name="Author" content=""/>
+	<link rel="stylesheet" type="text/css" href="style.css">
 	
 </head>
 <body>
-<h1 class="quote">Quote</h1>
-<h2 class="author">Author</h2>
-<button onclick="insert()">New Quote</button>
+	<div class="quoteBox">
+		<h3 class="quote">Quote</h3>
+		<h5 class="author">Author</h5>
+	</div>
+	<div>
+		<button class="btn" onclick="insert()">New Quote</button>
+		<button class="btn">Tweet!</button>
+	</div>
+	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>	
 <script src="script.js" type="text/javascript"></script>
 </body>
 </html>
