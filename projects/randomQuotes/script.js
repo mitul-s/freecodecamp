@@ -27,6 +27,10 @@ request.send();
 
 $(document).ready(getQuote);
 
+var colors = ['red', 'blue', 'green', 'purple', 'yellow', 'black', 'lightseagreen', 'coral']; // colour testing - to be changed
+var quoteBox = document.querySelector('.quoteBox');
+
+
 function getQuote() {
   $.ajax({
     dataType: "jsonp",
@@ -39,10 +43,18 @@ function getQuote() {
   });
 }
 
+function colorChange(){
+	var random = colors[Math.floor(Math.random() * colors.length)];
+	quoteBox.style.backgroundColor = random;
+}
+
+
+
 $(document).ready(function() {
   // get a random quote when page loads
   getQuote();
-  $('.btn').click(getQuote);
+  	$('.quote-btn').click(getQuote);
+	$('.quote-btn').click(colorChange);
 });
 
 
