@@ -1,23 +1,35 @@
 body {
 	font-family: 'Lato', sans-serif;
-	background-image: url(https://unsplash.it/2024/968/?random);
+	background-image: url(https://unsplash.it/2000/1100/?random);
 	background-repeat: no-repeat;
 	background-color: #141414;	
+}
+
+
+.container {
+  	width: 100%;
+	height: 100%;
+	position: absolute;
+  	top: 50%; left: 50%;
+  	transform: translate(-50%,-50%);
 }
 
 .quoteBox {
 	background-color: lightseagreen;
 	color: ghostwhite;
 	width: 700px;
-	height: 180px;
-    position: absolute;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-	padding: 20px 20px 20px 20px;
+	height: auto;
+	padding: 20px;
 	border: 4px solid white;
+	position: absolute;
+  	top: 50%; left: 50%;
+  	transform: translate(-50%,-50%);
+}
+
+.buttons{
+	position: absolute;
+  	top: 67%; left: 50%;
+  	transform: translate(-50%,-50%);	
 }
 
 .btn {
@@ -27,7 +39,10 @@ body {
     text-decoration: none;
     display: inline-block;
 	background-color: #2C3E50;
-	color: white;	
+	color: white;
+	text-transform: uppercase;
+	font-family: 'Helvetica';
+	font-weight: 700;
 }
 
 .btn:hover {
@@ -35,4 +50,20 @@ body {
 	background-color: white;
 	border-color: #2c3e50;
 	transition: 0.5s;
+}
+
+.me {
+	color: white;
+	background-color: darkslategrey;
+	padding: 10px;
+	text-align: center;
+	border: 3px solid white;
+}
+.me a {
+	text-decoration: none;
+	color: white;
+	transition: 0.3s;
+}
+.me a:hover {
+	color: lightseagreen;
 }
