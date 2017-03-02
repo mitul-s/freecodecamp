@@ -27,8 +27,9 @@ request.send();
 
 $(document).ready(getQuote);
 
-var colors = ['red', 'blue', 'green', 'purple', 'yellow', 'black', 'lightseagreen', 'coral']; // colour testing - to be changed
+var colors = ['#e74c3c', '#3498db', '#2ecc71', '#9b59b6', '#f1c40f', '#34495e', '#4DAF7C', 'coral', '#F89406', '#22A7F0'];
 var quoteBox = document.querySelector('.quoteBox');
+var tweetBtn = document.querySelector('.tweet-btn');
 
 
 function getQuote() {
@@ -37,8 +38,13 @@ function getQuote() {
     jsonpCallback: "parseQuote",
     url: "http://quotes.stormconsultancy.co.uk/random.json",
     success: function(results) {
-      $('.quote').text(results.quote);
-      $('.author').text(results.author);
+		if(results.quote.length <= 150){
+			$('.quote').text(results.quote);	
+			$('.author').text(results.author);
+			$('.tweet-link').attr("href", 'https://twitter.com/intent/tweet?text=' + results.quote + ' - ' + results.author);
+		} else {
+			getQuote();	
+		}	
     }
   });
 }
@@ -48,14 +54,9 @@ function colorChange(){
 	quoteBox.style.backgroundColor = random;
 }
 
-
-
 $(document).ready(function() {
   // get a random quote when page loads
   getQuote();
   	$('.quote-btn').click(getQuote);
 	$('.quote-btn').click(colorChange);
 });
-
-
-//http://codepen.io/marcywilliamspudalov/pen/PPqOmN
