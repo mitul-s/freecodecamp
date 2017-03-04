@@ -1,3 +1,3 @@
 # Projects
 
-[Quote Generator](quotegen.surge.sh)
+[Quote Generator](https://quotegen.surge.sh)
