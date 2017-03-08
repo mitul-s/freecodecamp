@@ -1,0 +1,20 @@
+body{
+	background-color: #141414;
+	color: whitesmoke;
+	font-family: 'Lato', sans-serif;
+}
+.container {
+	margin: 0 auto;
+	height: 100%;
+	width: 80%;
+	padding: 30px;
+}
+
+#weatherText{
+	font-size: 100px;
+	text-align: center;
+}
+
+#metric{
+	background-color: lightseagreen;
+}
