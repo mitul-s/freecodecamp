@@ -28,10 +28,32 @@ $(document).ready(getWeather);
 //})
 //
 //
+var body = document.querySelector('body');
 var API = "&APPID=4ddb1b82dfbc99cb9eedfc8c2f096deb";
+//var lat = position.coords.latitude;
+//var long = position.coords.longtitude;
+//console.log(lat);
 var mainUrl = "http://api.openweathermap.org/data/2.5/weather?q=London&APPID=4ddb1b82dfbc99cb9eedfc8c2f096deb";
 var url = "http://api.openweathermap.org/data/2.5/weather?q=London" + API + "&units=imperial";
 var degree = " ºF";
+
+
+var x = document.querySelector(".test");
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude; 
+}
+
+
 
 function getWeather() {
   $.ajax({
@@ -43,9 +65,15 @@ function getWeather() {
   });
  }
 
+
 function updateData(results){
-	
 	$('#weatherText').text(Math.round(results.main.temp) + degree);
+	if(results.main.temp < 100){
+		body.style.backgroundImage = "url('https://source.unsplash.com/mNCFOaaLu5o/1600x1080')";
+	} else if(results.main.temp < 0){
+		body.style.backgroundImage = "url('https://source.unsplash.com/pvCAEfIa55o/1600x1080')";
+	}
+	
 }
 
 function metricChange(){

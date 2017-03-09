@@ -1,5 +1,7 @@
 body{
 	background-color: #141414;
+	background-repeat: no-repeat;
+	background-position: center;
 	color: whitesmoke;
 	font-family: 'Lato', sans-serif;
 }
@@ -13,6 +15,7 @@ body{
 #weatherText{
 	font-size: 100px;
 	text-align: center;
+	text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
 }
 
 #metric{
