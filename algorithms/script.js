@@ -9,7 +9,9 @@ function reverseString(str){
 reverseString("hello");
 // ==================== //
 
-
+// ==================== //
+// Factorialize a Number
+// ==================== //
 
 // ==================== //
 // Check for Palindromes
@@ -51,7 +53,9 @@ function findLong(str) {
 findLong("The quick brown fox jumped over the lazy dog");
 // ==================== //
 
-
+// ==================== //
+// Title Case a Sentence
+// ==================== //
 
 // ==================== //
 // Return Largest Numbers in Arrays
@@ -90,3 +94,74 @@ function confirmEnding(str, target) {
 confirmEnding("Bastian", "n");
 
 // ==================== //
+
+
+// ==================== //
+// Repeat a string, repeat a string
+function repeatStringNumTimes(str, num) {
+  return num > 0 ? str.repeat(num) : '';
+}
+
+repeatStringNumTimes("abc", 3);
+// ==================== //
+
+
+// ==================== //
+// Turnacate a String
+
+function truncateString(str, num) {
+  // Clear out that junk in your trunk
+  var newStr = "";
+  if(str.length > num){
+    if(num <= 3) {
+      	newStr = str.slice(0, num) + "...";
+    } else {
+       	newStr = str.slice(0, num - 3) + "...";
+    }
+  } else {
+    return str;
+  }
+  return newStr;
+}
+
+truncateString("A-tisket a-tasket A green and yellow basket", 11);
+
+// ==================== //
+
+
+// ==================== //
+// Chunky Monkey
+
+// ==================== //
+
+
+// ==================== //
+// Slasher Flick // Reduced this code significantly down to one line :)
+function slasher(arr, howMany) {
+  // it doesn't always pay to be first
+  return arr.slice(howMany);
+}
+
+slasher([1, 2, 3], 2);
+// ==================== //
+
+// ==================== //
+// Mutations
+// ==================== //
+
+// ==================== //
+// Falsy Bouncer
+// ==================== //
+
+// ==================== //
+// Seek and Destroy
+// ==================== //
+
+// ==================== //
+// Where do I belong
+// ==================== //
+
+// ==================== //
+// Caesars Cipher
+// ==================== //
+
