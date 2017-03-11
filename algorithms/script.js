@@ -1,6 +1,5 @@
 // ==================== //
 // Reverse a String
-
 function reverseString(str){
   var newStr = str.split("").reverse().join("");
   return newStr;
@@ -15,7 +14,6 @@ reverseString("hello");
 
 // ==================== //
 // Check for Palindromes
-
 function palindrome(str) {
   str = str.replace(/[^a-z0-9]+/gi, "");
   str = str.toLowerCase();
@@ -37,7 +35,6 @@ palindrome("nope");
 
 // ==================== //
 // Find Longest Word in a String
-
 function findLong(str) {
 	'use strict';
 	var newStr = 0;
@@ -59,7 +56,6 @@ findLong("The quick brown fox jumped over the lazy dog");
 
 // ==================== //
 // Return Largest Numbers in Arrays
-
 function largestOfFour(arr) {
   // You can do this!
   var newArr = [0,0,0,0];
@@ -79,7 +75,6 @@ largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 85
 
 // ==================== //
 // Confirm the Ending
-
 function confirmEnding(str, target) {
   // "Never give up and good luck will find you."
   // -- Falcor
@@ -108,7 +103,6 @@ repeatStringNumTimes("abc", 3);
 
 // ==================== //
 // Turnacate a String
-
 function truncateString(str, num) {
   // Clear out that junk in your trunk
   var newStr = "";
@@ -145,23 +139,73 @@ function slasher(arr, howMany) {
 slasher([1, 2, 3], 2);
 // ==================== //
 
+
 // ==================== //
 // Mutations
+function mutation(arr) {
+  var arrOne = arr[0].toLowerCase();
+  var arrTwo = arr[1].toLowerCase();
+  for (var i = 0; i < arrTwo.length; i++) {
+    if (arrOne.indexOf(arrTwo[i]) < 0)
+      return false;
+  }
+  return true;
+}
+
+mutation(["HELello", "hey"]);
 // ==================== //
+
+
 
 // ==================== //
 // Falsy Bouncer
+function bouncer(arr) {
+  // Don't show a false ID to this bouncer.
+  return arr.filter(Boolean);
+}
+
+bouncer([7, "ate", "", false, 9]);
 // ==================== //
+
+
 
 // ==================== //
 // Seek and Destroy
+
+
 // ==================== //
 
 // ==================== //
 // Where do I belong
+function getIndexToIns(arr, num) {
+  // Find my place in this sorted array.
+  arr.push(num);
+  arr.sort(function(a,b) {
+  return (a-b); 
+  });
+  return arr.indexOf(num);
+}
+
+getIndexToIns([40, 60], 50);
 // ==================== //
 
 // ==================== //
 // Caesars Cipher
+function rot13(str) {
+  return str.split('')
+    .map.call(str, function(char) {
+      x = char.charCodeAt(0);
+      if (x < 65 || x > 90) {
+        return String.fromCharCode(x);
+      }
+      else if (x < 78) {
+        return String.fromCharCode(x + 13);
+      }
+      return String.fromCharCode(x - 13);
+    }).join('');
+}
+
+// Change the inputs below to test
+rot13("SERR PBQR PNZC");
 // ==================== //
 
