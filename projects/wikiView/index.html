@@ -10,10 +10,17 @@
 <body>
 	<div class="container">
 		<h1>Wikipedia</h1>
-		<input type="text" id="search" />
-		<input type="submit" id="submit" />
+	<form id="form-container" class="form-container">
+        <input type="text" id="search" value="">
+        <button id="submit-btn" class="ui inverted button">Search</button>
+    </form>
+		<div class="wikiwrap">
+			<ul class="wiki">
+			
+			</ul>
+		</div>
 		<div class="wrap">
-			<div class="ui animated inverted blue large button" tabindex="0">
+			<div id="lucky-btn" class="ui animated inverted blue large button" tabindex="0">
 				<div class="visible content">
 					<a>I'M FEELING LUCKY</a>
 				</div>
@@ -23,7 +30,7 @@
 			</div>	
 		</div>
 	</div>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
 <script src="script.js" type="text/javascript"></script>
 </body>
 </html>
