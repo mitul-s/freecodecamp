@@ -6,28 +6,30 @@
 	<meta name="Author" content=""/>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/components/button.css" />
+	<link href="https://fonts.googleapis.com/css?family=Lato|Roboto" rel="stylesheet">
 </head>
 <body>
 	<div class="container">
-		<h1>Wikipedia</h1>
+		<h1 id='title'>WIKIPEDIA</h1>
 	<form id="form-container" class="form-container">
         <input type="text" id="search" value="">
-        <button id="submit-btn" class="ui inverted button">Search</button>
     </form>
 		<div class="wikiwrap">
 			<ul class="wiki">
+				
 			
 			</ul>
 		</div>
 		<div class="wrap">
-			<div id="lucky-btn" class="ui animated inverted blue large button" tabindex="0">
+			<div id="lucky-btn" class="ui animated inverted white button" tabindex="0">
 				<div class="visible content">
-					<a>I'M FEELING LUCKY</a>
+					<a class="text-btn">I'M FEELING LUCKY</a>
 				</div>
 					<div class="hidden content">
-						<a href="https://en.wikipedia.org/wiki/Special:Random">RANDOM ARTICLE</a>
+						<a href="https://en.wikipedia.org/wiki/Special:Random" class="hidden-btn">RANDOM ARTICLE</a>
 					</div>
-			</div>	
+			</div>
+			<button id="submit-btn" class="ui inverted button">Search</button>
 		</div>
 	</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
