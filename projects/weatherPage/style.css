@@ -49,8 +49,8 @@ a {
 }
 
 #metric:hover{
-	color: lightcoral;
-	transition-duration: 0.5s;
+	color: paleturquoise;
+	transition: all 0.5s;
 }
 
 #metric{
@@ -59,6 +59,7 @@ a {
 
 .other-con{
 	background-color: lightcoral;
+	border-radius: 2px;
 	text-align: center;	
 	padding: 7px;
 }
