@@ -52,6 +52,19 @@ findLong("The quick brown fox jumped over the lazy dog");
 
 // ==================== //
 // Title Case a Sentence
+function titleCase(str) {
+  var capStr = [];
+  var fullStr;
+  var newStr = str.split(" ");
+  for(var i = 0; i < newStr.length; i++){
+      capStr[i] = newStr[i].slice(0,1).toUpperCase() + newStr[i].slice(1).toLowerCase();
+      fullStr = capStr.join(" ");
+  }
+      return fullStr;
+}
+
+titleCase("I'm a little tea pot");
+
 // ==================== //
 
 // ==================== //
