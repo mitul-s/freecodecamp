@@ -64,7 +64,6 @@ function titleCase(str) {
 }
 
 titleCase("I'm a little tea pot");
-
 // ==================== //
 
 // ==================== //
@@ -100,7 +99,6 @@ function confirmEnding(str, target) {
 }
 
 confirmEnding("Bastian", "n");
-
 // ==================== //
 
 
