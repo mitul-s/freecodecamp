@@ -1,6 +1,6 @@
 var btn = document.querySelectorAll('.btn');
 
-for(var i = 0; i < btn.length; i++) {
+for (var i = 0; i < btn.length; i++) {
 	btn[i].onclick = function(e) {
 		
 		var input = document.querySelector('.numbers');
@@ -10,3 +10,5 @@ for(var i = 0; i < btn.length; i++) {
 		if(btnVal) input.innerHTML += btnVal;
 	} 
 }
+
+//
